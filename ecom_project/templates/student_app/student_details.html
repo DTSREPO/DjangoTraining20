@@ -1,0 +1,52 @@
+{% extends 'blog_app/base.html' %}
+
+{% block title %} My Blog Student Page {% endblock %}
+
+{% block page_header %}
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('static/img/home-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>NAME</h1>
+          <span class="subheading">{{std.name}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block content %}
+<!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col" style="text-align:center;">#</th>
+              <th scope="col" style="text-align:center;">Student Name</th>
+              <th scope="col" style="text-align:center;">Gender</th>
+              <th scope="col" style="text-align:center;">Age</th>
+              <th scope="col" style="text-align:center;">Class</th>
+              <th scope="col" style="text-align:center;">Roll</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" style="text-align:center;">1</th>
+              <td>{{std.name}}</td>
+              <td>{{std.gender}}</td>
+              <td style="text-align:center;">{{std.age}}</td>
+              <td>{{std.cls}}</td>
+              <td style="text-align:center;">{{std.roll}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'blog_app/base.html' %}
+
+{% block title %} My Blog District Page {% endblock %}
+
+{% block page_header %}
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('static/img/home-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>DISTRICTS</h1>
+          <span class="subheading">{{district.name}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block content %}
+<!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col" style="text-align:center;">#</th>
+              <th scope="col" style="text-align:center;">District Name</th>
+              <th scope="col" style="text-align:center;">Population</th>
+              <th scope="col" style="text-align:center;">Area</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" style="text-align:center;">1</th>
+              <td>{{district.name}}</td>
+              <td>{{district.population}}</td>
+              <td style="text-align:center;">{{district.area}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+{% endblock %}

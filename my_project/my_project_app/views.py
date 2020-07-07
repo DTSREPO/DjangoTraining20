@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 def index(request):
     # context = {'name': 'Md. Firoz Mahmud', 'age': 30, 'marks': 70, 'rolls': [1, 3, 4, 5]}
-    return render(request, 'index.html')
+    return render(request, 'home.html')
 
 
 def about(request):

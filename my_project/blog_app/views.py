@@ -4,7 +4,7 @@ from .models import Author, Post
 
 # Create your views here.
 def home(request):
-    return render(request, 'blog_app/index.html')
+    return render(request, 'blog_app/home.html')
 
 
 def about(request):

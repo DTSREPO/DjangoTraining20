@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d8913a4-7da2-4195-a78e-bf918607a6a8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/blog_project/templates/blog_app/author_post.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog_project/templates/blog_app/category_post.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/blog_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/blog_app/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/blog_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/blog_app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/templates/blog_app/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/templates/blog_app/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/templates/blog_app/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/templates/blog_app/sidebar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_project/templates/blog_app/single_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/templates/blog_app/single_post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog_project/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/blog_project/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

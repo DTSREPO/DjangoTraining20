@@ -11,3 +11,10 @@
 	<p>Set Post Category</p>
 	<p>Post Filter By Author & Category</p>
 </details>
+
+### Home Page
+![](media/screenshot/home.png)
+
+
+### Single Post Page
+![](media/screenshot/single.png)

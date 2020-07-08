@@ -2,3 +2,12 @@
 
 `blog_project` is a main directory for Blog Project. Here included `blog_project_app`.<br/>
 `blog_project_app` is using for manage this project and here also included `blog_app` it's specially for blog app.
+
+## Features
+<details>
+	<p>Create Post</p>
+	<p>Upload Image</p>
+	<p>Set Post Author</p>
+	<p>Set Post Category</p>
+	<p>Post Filter By Author & Category</p>
+</details>

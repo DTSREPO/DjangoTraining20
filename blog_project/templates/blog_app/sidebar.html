@@ -21,7 +21,7 @@
           <ul class="list-unstyled mb-0">
 
             <li>
-              <a href="#">{{ author.name }}</a>
+              <a href="{% url 'author_post' author.name %}">{{ author.name }}</a>
             </li>
             <hr>
 
@@ -42,7 +42,7 @@
           <ul class="list-unstyled mb-0">
 
             <li>
-              <a href="#">{{ category.name }}</a>
+              <a href="{% url 'category_post' category.name %}">{{ category.name }}</a>
             </li>
             <hr>
 

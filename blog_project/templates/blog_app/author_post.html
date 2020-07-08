@@ -1,7 +1,8 @@
 {% extends 'blog_app/base.html' %}
 
 {% block page-heading %}
-  <h1 class="my-4">Latest Post<small></small>
+  <h1 class="my-4">Author Post
+    <small> :: {{ author }}</small>
   </h1>
 {% endblock %}
 
@@ -16,7 +17,7 @@
     <a href="{% url 'single_post' post.id %}" class="btn btn-primary">Read More &rarr;</a>
   </div>
   <div class="card-footer text-muted">
-    Posted on {{post.create_date}} by <a href="{% url 'author_post' post.author %}">{{post.author}}</a> | Category <a href="{% url 'category_post' post.category %}">{{ post.category }}</a>
+    Posted on {{post.create_date}} by <a href="#">{{post.author}}</a> | Category <a href="#">{{ post.category }}</a>
   </div>
 </div>
 {% endfor %}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>{% block title %} {% endblock %}</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/shop-homepage.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  {% include 'shop_app/main_nav.html' %}
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-3">
+        {% include "shop_app/sidebar.html" %}
+      </div>
+
+      <div class="col-lg-9">
+        {% block carousel %}
+          {% include "shop_app/carousel.html" %}
+        {% endblock %}
+        <div class="row">
+          <div class="col-md-12" style="text-align:center;">
+            {% block heading %} {% endblock %}
+          </div>
+        </div>
+        <div class="row">
+
+          {% block content %}
+
+          {% endblock %}
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  {% include 'shop_app/footer.html' %}
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

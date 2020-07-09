@@ -1,0 +1,22 @@
+{% extends 'shop_app/base.html' %}
+
+{% block title %}My Shop - Product Details{% endblock %}
+
+{% block carousel %}{% endblock %}
+
+{% block content %}
+<br>
+<div class="card">
+    <div class="media">
+        <img src="{{product.product_image.url}}" class="mr-3" alt="...">
+        <div class="media-body">
+            <h3 class="mt-0">{{product.name}}</h3>
+            <h5>Price : ৳ {{product.price}}</h5>
+            <p><strong>Description:</strong></p>
+            <p>{{product.description}}</p>
+            <p><a href="#" class="btn btn-primary">Add To Cart</a></p>
+        </div>
+    </div>
+</div>
+<br>
+{% endblock %}

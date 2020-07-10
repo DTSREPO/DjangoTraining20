@@ -7,8 +7,8 @@
 <details>
 	<p>Create Product</p>
 	<p>Upload Product Image</p>
-	<p>Set Post Category</p>
-	<p>Post Filter By Price Range & Category</p>
+	<p>Set Product Category</p>
+	<p>Product Filter By Price Range & Category</p>
 </details>
 
 ### Home Page

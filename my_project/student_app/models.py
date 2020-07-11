@@ -8,6 +8,7 @@ class Student(models.Model):
     age = models.CharField(max_length=15, verbose_name='Age')
     cls = models.CharField(max_length=150, verbose_name='Class')
     roll = models.IntegerField(verbose_name='Roll')
+    gpa = models.DecimalField(max_digits=3, decimal_places=2)
 
     def __str__(self):
         return self.name

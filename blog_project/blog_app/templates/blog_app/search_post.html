@@ -1,0 +1,33 @@
+{% extends 'blog_app/base.html' %}
+
+{% block page-heading %}
+  <h1 class="my-4">Search By
+    <small> :: {{ keyword }}</small>
+  </h1>
+{% endblock %}
+
+{% block content %}
+<!-- Blog Post -->
+{% for post in posts %}
+<div class="card mb-4">
+  <img class="card-img-top" src="{{ post.post_image.url }}" alt="Card image cap">
+  <div class="card-body">
+    <h2 class="card-title">{{post.title}}</h2>
+    <p class="card-text">{{post.description|truncatechars:255}}</p>
+    <a href="{% url 'single_post' post.id %}" class="btn btn-primary">Read More &rarr;</a>
+  </div>
+  <div class="card-footer text-muted">
+    Posted on {{post.create_date}} by <a href="#">{{post.author}}</a> | Category <a href="#">{{ post.category }}</a>
+  </div>
+</div>
+{% endfor %}
+<!-- Pagination -->
+<ul class="pagination justify-content-center mb-4">
+  <li class="page-item">
+    <a class="page-link" href="#">&larr; Older</a>
+  </li>
+  <li class="page-item disabled">
+    <a class="page-link" href="#">Newer &rarr;</a>
+  </li>
+</ul>
+{% endblock %}

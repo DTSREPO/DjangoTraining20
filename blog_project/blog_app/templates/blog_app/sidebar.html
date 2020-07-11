@@ -2,12 +2,15 @@
 <div class="card my-4">
   <h5 class="card-header">Search</h5>
   <div class="card-body">
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search for...">
-      <span class="input-group-append">
-        <button class="btn btn-secondary" type="button">Go!</button>
+    <form action="{% url 'search_post' %}" method="GET">
+<!--      {% csrf_token %}-->
+      <div class="input-group">
+        <input type="text" name="search" class="form-control" placeholder="Search for...">
+        <span class="input-group-append">
+        <input class="btn btn-secondary" type="submit" value="Search">
       </span>
-    </div>
+      </div>
+    </form>
   </div>
 </div>
 
@@ -17,16 +20,16 @@
   <div class="card-body">
     <div class="row">
       {% for author in authors %}
-        <div class="col-lg-6">
-          <ul class="list-unstyled mb-0">
+      <div class="col-lg-6">
+        <ul class="list-unstyled mb-0">
 
-            <li>
-              <a href="{% url 'author_post' author.name %}">{{ author.name }}</a>
-            </li>
-            <hr>
+          <li>
+            <a href="{% url 'author_post' author.name %}">{{ author.name }}</a>
+          </li>
+          <hr>
 
-          </ul>
-        </div>
+        </ul>
+      </div>
       {% endfor %}
     </div>
   </div>
@@ -38,16 +41,16 @@
   <div class="card-body">
     <div class="row">
       {% for category in categories %}
-        <div class="col-lg-6">
-          <ul class="list-unstyled mb-0">
+      <div class="col-lg-6">
+        <ul class="list-unstyled mb-0">
 
-            <li>
-              <a href="{% url 'category_post' category.name %}">{{ category.name }}</a>
-            </li>
-            <hr>
+          <li>
+            <a href="{% url 'category_post' category.name %}">{{ category.name }}</a>
+          </li>
+          <hr>
 
-          </ul>
-        </div>
+        </ul>
+      </div>
       {% endfor %}
     </div>
   </div>

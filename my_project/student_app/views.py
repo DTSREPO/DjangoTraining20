@@ -15,6 +15,11 @@ def student_details(request, id):
     return render(request, 'student_app/student_details.html', context)
 
 
+def student_result(request):
+    context = {'std': student}
+    return render(request, 'student_app/student_details.html', context)
+
+
 # def student_details(request, roll):
 #     students = {
 #         1: {

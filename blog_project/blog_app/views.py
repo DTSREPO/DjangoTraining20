@@ -44,4 +44,22 @@ def about(requests):
 
 
 def contact(requests):
+    # print(requests.GET)
+    name = requests.GET.get('name')
+    email = requests.GET.get('email')
+    subject = requests.GET.get('subject')
+    message = requests.GET.get('message')
+    print(name, email, subject, message)
     return render(requests, 'blog_app/contact.html')
+
+
+def search_post(requests):
+    # print(requests.GET)
+    keyword = requests.GET.get('search')
+    # print('Search Key: ', keyword)
+    posts = Post.objects.filter(title__icontains=keyword)
+    context = {
+        'keyword': keyword,
+        'posts': posts
+    }
+    return render(requests, 'blog_app/search_post.html', context)

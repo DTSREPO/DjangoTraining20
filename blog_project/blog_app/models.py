@@ -19,6 +19,7 @@ class Category(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=256)
+    slug = models.SlugField()
     description = models.TextField()
     post_image = models.ImageField(blank=True, null=True, upload_to='post')
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True)

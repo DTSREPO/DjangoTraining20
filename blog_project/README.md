@@ -2,6 +2,7 @@
 
 `blog_project` is a main directory for Blog Project. Here included `blog_project_app`.<br/>
 `blog_project_app` is using for manage this project and here also included `blog_app` it's specially for blog app.
+`blog_admin_app` this app is for custom admin.
 
 ## Features
 <details>
@@ -18,3 +19,7 @@
 
 ### Single Post Page
 ![](media/screenshot/single.png)
+
+
+### Custom Admin Panel
+![](media/screenshot/custom_admin.png)

@@ -1,0 +1,37 @@
+{% extends 'blog_admin_app/base.html' %}
+{% block title %} My Blog :: Posts {% endblock %}
+{% block content %}
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-table mr-1"></i> Post List <a href="{% url 'create-post' %}" class="btn btn-primary btn-sm float-right">Create New</a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                <tr>
+                    <th class="text-center">#</th>
+                    <th class="text-center">Post Title</th>
+                    <th class="text-center">Category</th>
+                    <th class="text-center">Author</th>
+                    <th class="text-center">Create Date</th>
+                    <th class="text-center">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for post in posts %}
+                <tr>
+                    <td class="text-center">{{ forloop.counter }}</td>
+                    <td>{{ post.title }}</td>
+                    <td>{{ post.category }}</td>
+                    <td>{{ post.author }}</td>
+                    <td class="text-center">{{ post.create_date }}</td>
+                    <td class="text-center"><a href="#">Edit</a> | <a href="#">Delete</a> </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

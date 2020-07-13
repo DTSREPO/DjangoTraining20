@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Author, Category, Post
+from .forms import AuthorCreateForm
 
 
 # Create your views here.
@@ -63,3 +64,25 @@ def search_post(requests):
         'posts': posts
     }
     return render(requests, 'blog_app/search_post.html', context)
+
+
+def author_list(requests):
+    authors = Author.objects.all()
+    context = {
+        'authors': authors
+    }
+    return render(requests, 'blog_app/backend/author_list.html', context)
+
+
+def create_author(requests):
+    form = AuthorCreateForm(requests.POST or None)
+    if requests.method == 'POST':
+        if form.is_valid():
+            form.save()
+
+            return redirect('add_author')
+
+    context = {
+        'form': form
+    }
+    return render(requests, 'blog_app/backend/create_author.html', context)

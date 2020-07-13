@@ -1,0 +1,18 @@
+{% extends 'blog_admin_app/base.html' %}
+
+{% block title %} My Blog :: Create Author {% endblock %}
+
+{% block content %}
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-table mr-1"></i> Add New Author <a href="{% url 'author-list' %}" class="btn btn-primary btn-sm float-right">All Authors</a>
+    </div>
+    <div class="card-body">
+        <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary float-right">Create</button>
+      </form>
+    </div>
+</div>
+{% endblock %}

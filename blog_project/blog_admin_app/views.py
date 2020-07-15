@@ -61,8 +61,9 @@ def post_list(request):
 
 
 def create_post(requests):
-    form = PostCreateForm(requests.POST or None)
+    form = PostCreateForm(requests.POST or None, requests.FILES or None)
     if requests.method == 'POST':
+        print(requests.POST)
         if form.is_valid():
             form.save()
 
